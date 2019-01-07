@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28407.52
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vector.Lab", "Vector.Lab\Vector.Lab.csproj", "{3A66CCEF-8716-4ADF-A6C7-EED0EA7B7C03}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vector.Lab", "Vector.Lab\Vector.Lab.csproj", "{3A66CCEF-8716-4ADF-A6C7-EED0EA7B7C03}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Memory.Lab", "Memory.Lab\Memory.Lab.csproj", "{0E846F96-7959-4DC5-85F4-855FC591438C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Structs.Lab", "Structs.Lab\Structs.Lab.csproj", "{659868F0-D9CE-4700-9244-CE95124A7E23}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{3A66CCEF-8716-4ADF-A6C7-EED0EA7B7C03}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3A66CCEF-8716-4ADF-A6C7-EED0EA7B7C03}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3A66CCEF-8716-4ADF-A6C7-EED0EA7B7C03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E846F96-7959-4DC5-85F4-855FC591438C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E846F96-7959-4DC5-85F4-855FC591438C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E846F96-7959-4DC5-85F4-855FC591438C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E846F96-7959-4DC5-85F4-855FC591438C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{659868F0-D9CE-4700-9244-CE95124A7E23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{659868F0-D9CE-4700-9244-CE95124A7E23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{659868F0-D9CE-4700-9244-CE95124A7E23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{659868F0-D9CE-4700-9244-CE95124A7E23}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
