@@ -6,16 +6,24 @@ namespace Structs.Lab
 {
     class Program
     {
+        private static int numberOfRequests = 10;
+
 
         static void Main(string[] args)
         {
             var s = Stopwatch.StartNew();
-            new MyTest().TestClass();
+            for (int r = 0; r < numberOfRequests; r++)
+            {
+                new MyTest().TestClass();
+            }
             s.Stop();
             Console.WriteLine($" Class  => {s.ElapsedMilliseconds,5:N0} ms");
 
             var s1 = Stopwatch.StartNew();
-            new MyTest().TestStruct();
+            for (int r = 0; r < numberOfRequests; r++)
+            {
+                new MyTest().TestStruct();
+            }
             s1.Stop();
             Console.WriteLine($" Struct => {s1.ElapsedMilliseconds,5:N0} ms");
 
@@ -26,32 +34,30 @@ namespace Structs.Lab
 
         public class MyTest
         {
-            private static int numberOfIterations = 25000;
-            private static int numberOfRequests = 100000;
+            private static int numberOfIterations = 10000000;
+            
 
 
             public void TestClass()
             {
-                for (int r = 0; r < numberOfRequests; r++)
-                {
+             
                     var list = new CoordRef[numberOfIterations];
                     for (int i = 0; i < numberOfIterations; i++)
                     {
                         list[i] = new CoordRef(i, i);
                     }
-                }
+
             }
 
             public void TestStruct()
             {
-                for (int r = 0; r < numberOfRequests; r++)
-                {
+        
                     var list = new CoordVal[numberOfIterations];
                     for (int i = 0; i < numberOfIterations; i++)
                     {
                         list[i] = new CoordVal(i, i);
                     }
-                }
+        
             }
         }
     }
