@@ -9,8 +9,6 @@ namespace Structs.Lab
 
         static void Main(string[] args)
         {
-
-
             var s = Stopwatch.StartNew();
             new MyTest().TestClass();
             s.Stop();
@@ -21,7 +19,6 @@ namespace Structs.Lab
             s1.Stop();
             Console.WriteLine($" Struct => {s1.ElapsedMilliseconds,5:N0} ms");
 
-
             Console.WriteLine($"\n Struct is {s.ElapsedMilliseconds / s1.ElapsedMilliseconds }x faster!");
             Console.WriteLine();
 
@@ -29,33 +26,30 @@ namespace Structs.Lab
 
         public class MyTest
         {
-            private static int numberOfIterations = 100000;
-            private static int numberOfRequests = 1000;
+            private static int numberOfIterations = 25000;
+            private static int numberOfRequests = 100000;
 
 
             public void TestClass()
             {
                 for (int r = 0; r < numberOfRequests; r++)
                 {
-
-
-
-                    var list = new List<CoordRef>();
+                    var list = new CoordRef[numberOfIterations];
                     for (int i = 0; i < numberOfIterations; i++)
                     {
-                        list.Add(new CoordRef(i, i));
+                        list[i] = new CoordRef(i, i);
                     }
                 }
             }
 
-            public  void TestStruct()
+            public void TestStruct()
             {
                 for (int r = 0; r < numberOfRequests; r++)
                 {
-                    var list = new List<CoordVal>();
+                    var list = new CoordVal[numberOfIterations];
                     for (int i = 0; i < numberOfIterations; i++)
                     {
-                        list.Add(new CoordVal(i, i));
+                        list[i] = new CoordVal(i, i);
                     }
                 }
             }
@@ -66,8 +60,8 @@ namespace Structs.Lab
 
     class CoordRef
     {
-        public int X { get; set; }
-        public int Y { get; set; }
+        public int X;
+        public int Y;
         public CoordRef(int x, int y)
         {
             X = x;
@@ -77,8 +71,8 @@ namespace Structs.Lab
 
     struct CoordVal
     {
-        public int X { get; set; }
-        public int Y { get; set; }
+        public int X;
+        public int Y;
 
         public CoordVal(int x, int y)
         {
